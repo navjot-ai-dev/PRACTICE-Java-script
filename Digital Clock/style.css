@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81
+    );
+}
+
+.clock-container{
+    width:500px;
+    padding:40px;
+    text-align:center;
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+      0 0 20px rgba(0,255,255,.3),
+
+    
+}
+
+@keyframes glow{
+    from{
+        box-shadow:
+          0 0 20px cyan,
+          0 0 40px cyan;
+    }
+    to{
+        box-shadow:
+          0 0 40px #00ffff,
+          0 0 80px #00ffff;
+    }
+}
+
+.date{
+    color:#fff;
+    font-size:1.2rem;
+    margin-bottom:15px;
+    letter-spacing:2px;
+}
+
+.clock{
+    color:#00ffff;
+    font-size:4rem;
+    font-weight:bold;
+
+}
+
+.ampm{
+    margin-top:10px;
+    color:#fff;
+    font-size:1.5rem;
+    letter-spacing:3px;
+}
+
+@media(max-width:600px){
+    .clock-container{
+        width:90%;
+    }
+
+    .clock{
+        font-size:2.5rem;
+    }
+}
